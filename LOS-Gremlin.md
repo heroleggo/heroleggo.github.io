@@ -9,10 +9,10 @@ LOS Gremlin
 
 ##
 
-<img src="assets/gremlin_los.png" width=50%>
+<img src="assets/gremlin_los.png" width=50%/>
 
 문제는 간단하다. id를 admin으로 바꾸어 주기만 하면 쉽게 문제를 해결할 수 있다.
 
 여기서 pw를 우회하려면, $_GET[id] 부분에서 주석을 입력해서 뒤에 위치한 코드를 인식하지 않게 하면 된다.
 
-그렇게 입력한 페이로드는 id=admin%27%23 (id=admin'#)이다.
+####그렇게 입력한 페이로드는 id=admin%27%23 (id=admin'#)이다.
