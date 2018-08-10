@@ -1,7 +1,13 @@
 ---
+
 title: second page
+
 layout: page
+------------
+
+Second Page
+-----------
+
 ---
 
-
-나는 내용을 입력할꺼야. 재미있잖아?
+It is the second page made with markdown.
