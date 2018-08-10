@@ -7,7 +7,7 @@ LOS Gremlin
 >
 > 여러 가지의 SQL Injection을 풀 수 있는 환경을 만들어 놓았다.
 
-![gremlin_los](/assets/gremlin_los.png)
+![gremlin_los](/assets/gremlin_los.png width:50%)
 
 문제는 간단하다. id를 admin으로 바꾸어 주기만 하면 쉽게 문제를 해결할 수 있다.
 
