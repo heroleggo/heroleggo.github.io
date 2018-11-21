@@ -20,7 +20,7 @@
 
 bsqli 문제는 우리가 쿼리의 결과를 알 수 없는 blind sql injection 문제였다. 이를 해결하기 위해서 sleep 함수를 이용하여 쿼리가 참일 경우 sleep을 실행하고 그렇지 않을 경우 그냥 넘어가도록 로직을 짰다. 가장 많이 사용한 쿼리는 " %bf' or id=0x61646d696e and sleep(~~) # "였다. 
 
-##  
+---
 
 ## esqli 
 
