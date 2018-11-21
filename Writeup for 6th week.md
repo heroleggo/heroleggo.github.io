@@ -27,6 +27,12 @@ bsqli 문제는 우리가 쿼리의 결과를 알 수 없는 blind sql injection
 esqli 문제는 쿼리에 에러가 있을 경우 echo를 통해 에러를 출력해주는 로직이 있었는데, 이를 이용해서 문제를 해결할 수 있었다. 쿼리가 정상적으로 수행되었을 경우, extractvalue 를 통해서 에러를 발생시키도록 했다. 이를 통해서 select 문을 사용하여 원하는 쿼리를 뽑아냈다. 사용한 쿼리는 " %bf' or id=0x61646d696e and extractvalue(rand(), concat(0x3a, (select pw from user where id=0x61646d696e)))# "이다.
 
 
+---
+
+## ebsqli
+ebsqli 문제는 쿼리에 에러가 있을 경우 멈추고, 쿼리에 에러가 없을 경우 지속하는 if문을 사용하여 문제를 해결하였다. pw에 인젝션 쿼리를 담아서 전송하고, 이를 통해 pw의 길이를 유추하고, pw 자체를 유추할 수 있었다. 가장 사용한 쿼리는 " %bf' or id=0x61646d696e and if((length(pw)={0}), (select 1 union select 2), 1)#".format(length) 와 " %bf' or id=0x61646d696e and if((ascii(substr(pw,{0},1))={0}), (select 1 union select 2), 1)#".format(i, ch)였다.
+
+
 
 ---
 
